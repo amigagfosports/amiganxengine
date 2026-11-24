@@ -9,7 +9,7 @@ OUT=${2:-"$ROOT/build/os3/nxengine-evo"}
 P="$STOVE/prefix"
 SYS="$P/m68k-amigaos"
 DEPS=$(python3 "$ROOT/scripts/port_dependencies.py" verify --stove "$STOVE" --require zlib png jpeg)
-python3 "$ROOT/scripts/verify_gameport_stove.py" --stove "$STOVE" >/dev/null
+python3 "$ROOT/scripts/record_stove.py" --stove "$STOVE" >/dev/null
 CC="$P/bin/m68k-amigaos-gcc"
 CXX="$P/bin/m68k-amigaos-g++"
 SDL2_CONFIG="$P/bin/sdl2-config"
